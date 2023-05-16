@@ -88,12 +88,12 @@ namespace Kurs_Model_11
         {
             // Отображение буфферного делимого -AM.
             var result = Convert.ToString(am, 2).PadLeft(32, '0');
-            for (int i = 17 - 1, a = 31; i >= 0; i--, a--)
+            for (int i = 32 - 1, a = 31; i >= 0; i--, a--)
                 dataGridViewAM.Rows[0].Cells[i].Value = result[a];
 
             // Отображение буфферного делителя - BM.
             result = Convert.ToString(bm, 2).PadLeft(32, '0');
-            for (int i = 17 - 1, b = 31; i >= 0; i--, b--)
+            for (int i = 32 - 1, b = 31; i >= 0; i--, b--)
                 dataGridViewBM.Rows[0].Cells[i].Value = result[b];
 
             // Отображение счетчика.
@@ -103,7 +103,7 @@ namespace Kurs_Model_11
 
             // Отображение частного - С.
             result = Convert.ToString(c, 2).PadLeft(32, '0');
-            for (int i = 17 - 1, q = 31; i >= 0; i--, q--)
+            for (int i = 32 - 1, q = 31; i >= 0; i--, q--)
                 dataGridViewC5.Rows[0].Cells[i].Value = result[q];
         }
         // Обновление состояния автомата.
