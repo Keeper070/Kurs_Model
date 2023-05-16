@@ -109,16 +109,16 @@ namespace Kurs_Model_11
         // Обновление состояния автомата.
         public void UpdateStateMemory(bool[] state)
         {
-            radioButtonA0.Checked = state[0];
-            radioButtonA1.Checked = state[1];
-            radioButtonA2.Checked = state[2];
-            radioButtonA3.Checked = state[3];
-            radioButtonA4.Checked = state[4];
-            radioButtonA5.Checked = state[5];
-            radioButtonA6.Checked = state[6];
-            radioButtonA7.Checked = state[7];
-            radioButtonA8.Checked = state[8];
-            radioButtonA9.Checked = state[9];
+            radioButtonA0_0.Checked = state[0];
+            radioButtonA1_1.Checked = state[1];
+            radioButtonA2_2.Checked = state[2];
+            radioButtonA3_3.Checked = state[3];
+            radioButtonA4_4.Checked = state[4];
+            radioButtonA5_5.Checked = state[5];
+            radioButtonA6_6.Checked = state[6];
+            radioButtonA7_7.Checked = state[7];
+            radioButtonA8_8.Checked = state[8];
+            radioButtonA9_9.Checked = state[9];
 
 
             for (var i = 0; i < state.Length; i++)
@@ -128,16 +128,16 @@ namespace Kurs_Model_11
         // Номер метки.
         public void UpdateA(ushort a)
         {
-            radioButtonA0.Checked = a == 0;
-            radioButtonA1.Checked = a == 1;
-            radioButtonA2.Checked = a == 2;
-            radioButtonA3.Checked = a == 3;
-            radioButtonA4.Checked = a == 4;
-            radioButtonA5.Checked = a == 5;
-            radioButtonA6.Checked = a == 6;
-            radioButtonA7.Checked = a == 7;
-            radioButtonA8.Checked = a == 8;
-            radioButtonA9.Checked = a == 9;
+            radioButtonA0_0.Checked = a == 0;
+            radioButtonA1_1.Checked = a == 1;
+            radioButtonA2_2.Checked = a == 2;
+            radioButtonA3_3.Checked = a == 3;
+            radioButtonA4_4.Checked = a == 4;
+            radioButtonA5_5.Checked = a == 5;
+            radioButtonA6_6.Checked = a == 6;
+            radioButtonA7_7.Checked = a == 7;
+            radioButtonA8_8.Checked = a == 8;
+            radioButtonA9_9.Checked = a == 9;
         }
         // Отображение Термы, KCY. KCD, ПЛУ
         public void UpdateTYDX(bool[] t, bool[] y, bool[] d, bool[] x)

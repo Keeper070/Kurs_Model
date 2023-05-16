@@ -3,11 +3,11 @@
     public class ControlMachine
     {
         private readonly Form1 _form1;
-        // ПС.
+        // Состояние автомата.
         private bool[] _aStates;
-        // KCY.
+        // сигналы из KCY.
         public bool[] _ySignal { get; set; }
-        // KCD.
+        // Сигналы из KCD.
         private bool[] _d;
         // Терма.
         private bool[] _t;
@@ -39,7 +39,6 @@
             {
               Tact();  
             }
-            _form1.UpdateA(0);
         }
 
         // Такт.
@@ -55,7 +54,7 @@
             StateMemory( Decoder(_d));
             Terma(_t);
             CSY();
-            KSD(_d);
+            СSD(_d);
             _operatingMachine.Tact();
 
             // Отображение
@@ -106,7 +105,7 @@
         }
 
         // Комбинационная схема D.
-        private void KSD(bool[] _d)
+        private void СSD(bool[] _d)
         {
             _d[0] = _d[1] = _d[2] = _d[3] = false;
             _d[0] = _t[2] || _t[4] || _t[6] || _t[7] || _t[10] || _t[12] || _t[13] || _t[14] || _t[15] || _t[16] ||

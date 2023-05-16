@@ -12,7 +12,7 @@ namespace Kurs_Model_11
         // Делитель
         private ushort _b;
         // Буфферная переменная для делимого.
-        public uint am;
+        public uint am { get; private set; }
         // Буфферная переменная для делителя.
         public uint bm;
         private uint _m;
@@ -29,16 +29,11 @@ namespace Kurs_Model_11
         // Переменная, говорящая о завершении работы автомата.
         public bool ready { get; set; }
 
-        public OperatingMachine(ControlMachine controlMachine,ushort a,ushort b)
+        public OperatingMachine(ControlMachine controlMachine, ushort a, ushort b)
         {
             _controlMachine = controlMachine;
             _a = a;
             _b = b;
-            am = 0;
-            bm = 0;
-            _m = 0;
-            count = 0;
-            c = 0;
             _x = new bool[8];
             // Массив микроопераций.
             masAction = new Action[]
@@ -72,7 +67,7 @@ namespace Kurs_Model_11
                 () =>
                 {
                     count = (byte)(count == 0
-                        ? count = 15    
+                        ? count = 15
                         : count - 1);
                 },
                 // y16.
@@ -105,11 +100,11 @@ namespace Kurs_Model_11
                 }
             }
 
-            LogicalDevice(_x);
+            LogicalDevice();
         }
 
         // Память логических условий.
-        public void LogicalDevice(bool[] _x)
+        public void LogicalDevice()
         {
             //_x[0] = _form1.isRun;
             _x[1] = (bm & 0x7FFF) == 0;
@@ -118,17 +113,12 @@ namespace Kurs_Model_11
             _x[4] = (am & 0x10000) != 0;
             _x[5] = count == 0;
             _x[6] = (c & 0x1) != 0;
-            _x[7] = (_a ^ _b) == 1;
+            _x[7] = ((_a & 0x8000) ^ (_b & 0x8000)) == 1;
         }
 
         public void Reset()
         {
             ready = false;
-            am = 0;
-            bm = 0;
-            _m = 0;
-            count = 0;
-            c = 0;
             _x = new bool[8];
         }
     }

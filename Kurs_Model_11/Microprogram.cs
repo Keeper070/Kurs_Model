@@ -31,11 +31,6 @@ namespace Kurs_Model_11
         public Microprogram(Form1 form1)
         {
             _form1 = form1;
-            _am = 0;
-            _bm = 0;
-            _m = 0;
-            count = 0;
-            _c = 0;
             _x = new bool[8];
             _x[0] = true;
             _condition = 0;
@@ -71,7 +66,7 @@ namespace Kurs_Model_11
                 () =>
                 {
                     count = (byte)(count == 0
-                        ? count = 15    
+                        ? count = 15
                         : count - 1);
                 },
                 // y16.
@@ -218,7 +213,7 @@ namespace Kurs_Model_11
             _form1.UpdateA(_condition);
             LogicalDevice(_x);
         }
-        
+
         // Память логических условий.
         public void LogicalDevice(bool[] _x)
         {
@@ -237,11 +232,6 @@ namespace Kurs_Model_11
             ready = false;
             _a = 0;
             _b = 0;
-            _am = 0;
-            _bm = 0;
-            _m = 0;
-            count = 0;
-            _c = 0;
             _x = new bool[8];
             _x[0] = false;
             _condition = 0;
