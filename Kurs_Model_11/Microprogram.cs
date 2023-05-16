@@ -28,6 +28,8 @@ namespace Kurs_Model_11
         private bool ready;
         // Состояние.
         private byte _condition;
+        // Переменная сигнализирующая о поступлении чисел в автомат.
+        private bool data;
         public Microprogram(Form1 form1)
         {
             _form1 = form1;
@@ -90,8 +92,13 @@ namespace Kurs_Model_11
         // Внесение данных полученое с главной формы.
         public void Data(ushort a, ushort b)
         {
-            _a = a;
-            _b = b;
+            if (!data)
+            {
+                _a = a;
+                _b = b;
+                data = true;
+            }
+           
         }
         // Автоматический режим.
         public void Go()
@@ -235,6 +242,7 @@ namespace Kurs_Model_11
             _x = new bool[8];
             _x[0] = false;
             _condition = 0;
+            data = false;
         }
     }
 }

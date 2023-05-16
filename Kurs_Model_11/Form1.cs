@@ -264,20 +264,15 @@ namespace Kurs_Model_11
             _controlMachine.Reset();
             ResetA();
             ResetB();
+            ResetAM();
+            ResetBM();
+            ResetC();
             ResetCount();
         }
         // Кнопка сброса данных с таблицы А.
         private void buttonResetA_Click(object sender, EventArgs e)
         {
             ResetA();
-        }
-        // Кнопка сброса счетчика.
-        private void ResetCount()
-        {
-            for (var i = 0; i < dataGridViewCount.Rows[0].Cells.Count; i++)
-            {
-                dataGridViewCount.Rows[0].Cells[i].Value = 0;
-            }
         }
         // Метод для сброса А.
         private void ResetA()
@@ -289,7 +284,7 @@ namespace Kurs_Model_11
 
             _a = 0;
         }
-        // Кнопка сброса данных с таблицы А.
+        // Кнопка сброса данных с таблицы B.
         private void buttonResetB_Click(object sender, EventArgs e)
         {
             ResetB();
@@ -302,6 +297,38 @@ namespace Kurs_Model_11
                 dataGridViewB.Rows[0].Cells[i].Value = 0;
             }
             _b = 0;
+        }
+        // Кнопка сброса счетчика.
+        private void ResetCount()
+        {
+            for (var i = 0; i < dataGridViewCount.Rows[0].Cells.Count; i++)
+            {
+                dataGridViewCount.Rows[0].Cells[i].Value = 0;
+            }
+        }
+        // Метод для сброса данных с таблицы AM
+        private void ResetAM()
+        {
+            for (var i = 0; i < dataGridViewAM.Rows[0].Cells.Count; i++)
+            {
+                dataGridViewAM.Rows[0].Cells[i].Value = 0;
+            }
+        }
+        // Метод для сброса данных с таблицы BM
+        private void ResetBM()
+        {
+            for (var i = 0; i < dataGridViewBM.Rows[0].Cells.Count; i++)
+            {
+                dataGridViewBM.Rows[0].Cells[i].Value = 0;
+            }
+        }
+        // Метод для сброса данных с таблицы C
+        private void ResetC()
+        {
+            for (var i = 0; i < dataGridViewC5.Rows[0].Cells.Count; i++)
+            {
+                dataGridViewC5.Rows[0].Cells[i].Value = 0;
+            }
         }
         #endregion
     }

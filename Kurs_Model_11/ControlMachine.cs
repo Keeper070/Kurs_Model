@@ -15,6 +15,8 @@
         private int _preexisting;
         // Операционнный автомат
         private OperatingMachine _operatingMachine;
+        // Переменная сигнализирующая о поступлении чисел в автомат.
+        private bool data;
         public ControlMachine(Form1 form1)
         {
             _form1 = form1;
@@ -28,8 +30,13 @@
         // Внесение данных полученое с главной формы.
         public void Data(ushort a, ushort b)
         {
-            _operatingMachine = new OperatingMachine(this,a,b);
-            _operatingMachine._x[0] = true;
+            if(!data)
+            {
+                _operatingMachine = new OperatingMachine(this, a, b);
+                _operatingMachine._x[0] = true;
+                data = true;
+            }
+           
         }
        
         // Автоматический режим работы.
@@ -201,6 +208,7 @@
             _t = new bool[19];
             _d = new bool[5];
             _preexisting = 0;
+            data = false;
             _operatingMachine = new OperatingMachine(this, 0, 0);
         }
     }
