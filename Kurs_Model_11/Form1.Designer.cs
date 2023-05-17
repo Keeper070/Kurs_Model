@@ -41,7 +41,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -101,6 +100,9 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonTact = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBox_X0_0 = new System.Windows.Forms.CheckBox();
+            this.checkBox_X0_1 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -344,7 +346,7 @@
             "Y17",
             "Y18",
             "Y19"});
-            this.checkedListBoxY.Location = new System.Drawing.Point(595, 572);
+            this.checkedListBoxY.Location = new System.Drawing.Point(595, 564);
             this.checkedListBoxY.MultiColumn = true;
             this.checkedListBoxY.Name = "checkedListBoxY";
             this.checkedListBoxY.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -756,16 +758,8 @@
             this.dataGridViewAM.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewAM.Location = new System.Drawing.Point(75, 43);
             this.dataGridViewAM.Name = "dataGridViewAM";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAM.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridViewAM.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewAM.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewAM.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridViewAM.ShowCellErrors = false;
             this.dataGridViewAM.ShowCellToolTips = false;
@@ -779,8 +773,8 @@
             this.dataGridViewCount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCount.Location = new System.Drawing.Point(1003, 115);
             this.dataGridViewCount.Name = "dataGridViewCount";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridViewCount.RowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridViewCount.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewCount.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridViewCount.Size = new System.Drawing.Size(140, 54);
             this.dataGridViewCount.TabIndex = 6;
@@ -863,13 +857,16 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.checkBox_X0_1);
+            this.groupBox5.Controls.Add(this.checkBox_X0_0);
+            this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.buttonStart);
             this.groupBox5.Controls.Add(this.buttonReset);
             this.groupBox5.Controls.Add(this.buttonTact);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox5.Location = new System.Drawing.Point(788, 723);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(537, 75);
+            this.groupBox5.Size = new System.Drawing.Size(537, 124);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Управление";
@@ -903,6 +900,38 @@
             this.buttonTact.Text = "Такт";
             this.buttonTact.UseVisualStyleBackColor = true;
             this.buttonTact.Click += new System.EventHandler(this.buttonTact_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Location = new System.Drawing.Point(153, 81);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 40);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Х0";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkBox_X0_0
+            // 
+            this.checkBox_X0_0.AutoSize = true;
+            this.checkBox_X0_0.Location = new System.Drawing.Point(211, 86);
+            this.checkBox_X0_0.Name = "checkBox_X0_0";
+            this.checkBox_X0_0.Size = new System.Drawing.Size(45, 33);
+            this.checkBox_X0_0.TabIndex = 11;
+            this.checkBox_X0_0.Text = "0";
+            this.checkBox_X0_0.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_X0_1
+            // 
+            this.checkBox_X0_1.AutoSize = true;
+            this.checkBox_X0_1.Location = new System.Drawing.Point(257, 86);
+            this.checkBox_X0_1.Name = "checkBox_X0_1";
+            this.checkBox_X0_1.Size = new System.Drawing.Size(45, 33);
+            this.checkBox_X0_1.TabIndex = 12;
+            this.checkBox_X0_1.Text = "1";
+            this.checkBox_X0_1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -948,6 +977,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1031,5 +1061,8 @@
         private System.Windows.Forms.RadioButton radioButtonA2_2;
         private System.Windows.Forms.RadioButton radioButtonA1_1;
         private System.Windows.Forms.RadioButton radioButtonA0_0;
+        private System.Windows.Forms.CheckBox checkBox_X0_1;
+        private System.Windows.Forms.CheckBox checkBox_X0_0;
+        private System.Windows.Forms.Label label7;
     }
 }

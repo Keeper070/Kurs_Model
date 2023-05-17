@@ -219,42 +219,50 @@ namespace Kurs_Model_11
         // Кнопка старт для автоматического режима работы.
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            if (radioButtonMicroprogram.Checked)
+            if (checkBox_X0_1.Checked)
             {
-                if (radioButtonAuto.Checked)
+                if (radioButtonMicroprogram.Checked)
                 {
-                    _microprogram.Data(_a, _b);
-                    _microprogram.Go();
+                    if (radioButtonAuto.Checked)
+                    {
+                        _microprogram.Data(_a, _b);
+                        _microprogram.Go();
+                    }
+                }
+                if (radioButtonYAOA.Checked)
+                {
+                    if (radioButtonAuto.Checked)
+                    {
+                        _controlMachine.Data(_a, _b);
+                        _controlMachine.Go();
+                    }
                 }
             }
-            if (radioButtonYAOA.Checked)
-            {
-                if (radioButtonAuto.Checked)
-                {
-                    _controlMachine.Data(_a, _b);
-                    _controlMachine.Go();
-                }
-            }
+           
         }
         // Кнопка такт для потактового режима работы.
         private void buttonTact_Click(object sender, EventArgs e)
         {
-            if (radioButtonMicroprogram.Checked)
+            if (checkBox_X0_1.Checked)
             {
-                if (radioButtonTact.Checked)
+                if (radioButtonMicroprogram.Checked)
                 {
-                    _microprogram.Data(_a, _b);
-                    _microprogram.Tact();
+                    if (radioButtonTact.Checked)
+                    {
+                        _microprogram.Data(_a, _b);
+                        _microprogram.Tact();
+                    }
+                }
+                if (radioButtonYAOA.Checked)
+                {
+                    if (radioButtonTact.Checked)
+                    {
+                        _controlMachine.Data(_a, _b);
+                        _controlMachine.Tact();
+                    }
                 }
             }
-            if (radioButtonYAOA.Checked)
-            {
-                if (radioButtonTact.Checked)
-                {
-                    _controlMachine.Data(_a, _b);
-                    _controlMachine.Tact();
-                }
-            }
+           
         }
 
         // Кнопка сброса для очистки всех данных.
