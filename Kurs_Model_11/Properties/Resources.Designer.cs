@@ -73,6 +73,16 @@ namespace Kurs_Model_11.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Schem {
+            get {
+                object obj = ResourceManager.GetObject("Schem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Shema {
             get {
                 object obj = ResourceManager.GetObject("Shema", resourceCulture);
