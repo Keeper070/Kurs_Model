@@ -150,8 +150,6 @@ namespace Kurs_Model_11
                 checkedListBoxD.SetItemChecked(i, d[i]);
             for (var i = 0; i < x.Length; i++)
                 checkedListBoxX.SetItemChecked(i, x[i]);
-            for (var i = 0; i < x.Length; i++)
-                checkedListBoxX_PLY.SetItemChecked(i, x[i]);
         }
         // Текущее состояние.
         public void UpdateInfoState(bool[] dt)

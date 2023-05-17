@@ -55,6 +55,7 @@
             this.radioButtonA2_2 = new System.Windows.Forms.RadioButton();
             this.radioButtonA1_1 = new System.Windows.Forms.RadioButton();
             this.radioButtonA0_0 = new System.Windows.Forms.RadioButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkedListBoxX = new System.Windows.Forms.CheckedListBox();
@@ -63,6 +64,7 @@
             this.checkedListBoxA = new System.Windows.Forms.CheckedListBox();
             this.checkedListBoxD = new System.Windows.Forms.CheckedListBox();
             this.checkedListBoxDt = new System.Windows.Forms.CheckedListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radioButtonA9 = new System.Windows.Forms.RadioButton();
             this.radioButtonA8 = new System.Windows.Forms.RadioButton();
             this.radioButtonA7 = new System.Windows.Forms.RadioButton();
@@ -99,14 +101,13 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonTact = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkedListBoxX_PLY = new System.Windows.Forms.CheckedListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewA)).BeginInit();
@@ -118,8 +119,6 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -264,6 +263,16 @@
             this.radioButtonA0_0.TabStop = true;
             this.radioButtonA0_0.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Kurs_Model_11.Properties.Resources.GSA;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(2071, 2371);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel1);
@@ -279,7 +288,6 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel1.Controls.Add(this.checkedListBoxX_PLY);
             this.panel1.Controls.Add(this.checkedListBoxX);
             this.panel1.Controls.Add(this.checkedListBoxY);
             this.panel1.Controls.Add(this.checkedListBoxT);
@@ -298,14 +306,17 @@
             this.checkedListBoxX.Items.AddRange(new object[] {
             "X0",
             "X1",
+            "X2",
+            "X3",
+            "X4",
             "X5",
             "X6",
             "X7"});
-            this.checkedListBoxX.Location = new System.Drawing.Point(309, 395);
+            this.checkedListBoxX.Location = new System.Drawing.Point(898, 171);
             this.checkedListBoxX.MultiColumn = true;
             this.checkedListBoxX.Name = "checkedListBoxX";
             this.checkedListBoxX.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkedListBoxX.Size = new System.Drawing.Size(183, 124);
+            this.checkedListBoxX.Size = new System.Drawing.Size(72, 274);
             this.checkedListBoxX.TabIndex = 6;
             // 
             // checkedListBoxY
@@ -333,7 +344,7 @@
             "Y17",
             "Y18",
             "Y19"});
-            this.checkedListBoxY.Location = new System.Drawing.Point(595, 580);
+            this.checkedListBoxY.Location = new System.Drawing.Point(595, 572);
             this.checkedListBoxY.MultiColumn = true;
             this.checkedListBoxY.Name = "checkedListBoxY";
             this.checkedListBoxY.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -416,6 +427,17 @@
             this.checkedListBoxDt.Name = "checkedListBoxDt";
             this.checkedListBoxDt.Size = new System.Drawing.Size(75, 154);
             this.checkedListBoxDt.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Kurs_Model_11.Properties.Resources.Schem;
+            this.pictureBox1.InitialImage = global::Kurs_Model_11.Properties.Resources.Shema;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 156);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(974, 531);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // radioButtonA9
             // 
@@ -882,41 +904,6 @@
             this.buttonTact.UseVisualStyleBackColor = true;
             this.buttonTact.Click += new System.EventHandler(this.buttonTact_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Kurs_Model_11.Properties.Resources.GSA;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(2071, 2371);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Kurs_Model_11.Properties.Resources.Schem;
-            this.pictureBox1.InitialImage = global::Kurs_Model_11.Properties.Resources.Shema;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 156);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(974, 531);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // checkedListBoxX_PLY
-            // 
-            this.checkedListBoxX_PLY.FormattingEnabled = true;
-            this.checkedListBoxX_PLY.Items.AddRange(new object[] {
-            "X2",
-            "X3",
-            "X4"});
-            this.checkedListBoxX_PLY.Location = new System.Drawing.Point(42, 410);
-            this.checkedListBoxX_PLY.MultiColumn = true;
-            this.checkedListBoxX_PLY.Name = "checkedListBoxX_PLY";
-            this.checkedListBoxX_PLY.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkedListBoxX_PLY.Size = new System.Drawing.Size(69, 94);
-            this.checkedListBoxX_PLY.TabIndex = 7;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -945,9 +932,11 @@
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewA)).EndInit();
@@ -959,8 +948,6 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1044,6 +1031,5 @@
         private System.Windows.Forms.RadioButton radioButtonA2_2;
         private System.Windows.Forms.RadioButton radioButtonA1_1;
         private System.Windows.Forms.RadioButton radioButtonA0_0;
-        private System.Windows.Forms.CheckedListBox checkedListBoxX_PLY;
     }
 }
