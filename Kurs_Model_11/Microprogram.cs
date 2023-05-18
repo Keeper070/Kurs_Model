@@ -231,7 +231,7 @@ namespace Kurs_Model_11
             _x[4] = (_am & 0x10000) != 0;
             _x[5] = count == 0;
             _x[6] = (_c & 0x1) != 0;
-            _x[7] = (_a ^ _b) == 1;
+            _x[7] = ((_a & 0x8000) ^ (_b & 0x8000)) != 0;
         }
         // Сброс.
         public void Reset()
